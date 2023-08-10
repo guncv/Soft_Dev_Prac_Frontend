@@ -1,0 +1,27 @@
+div ul{
+    color : blue;
+}
+
+ol , h4 {
+    color: #ee82ee;
+    background-color: yellow;
+}
+
+h1 {
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: 200;
+    margin: 50px;
+    background-color: yellow;
+    border: 6px  dashed;
+    border-color: black;
+    padding: 10px;
+}
+
+h5 {
+    display: inline;
+}
