@@ -1,63 +1,38 @@
-h1 {
-    font-size: 60px;
-}
-
-h2 {
-    font-size: 50px;
-}
-
-h4 {
-    font-size: 40px;
-}
-
-a {
-    padding-left: 200px;
-}
-
-.topic {
-    font-family: cursive;
-}
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
 
 body {
-    background: url(picture/orangeBackground.jpg) no-repeat;
-    background-size: cover ;
+    background: url("picture/bookfair.jpg") no-repeat;
+    background-size: cover;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#bookfair2 {
-    margin-top: 20px;
-}
-
-img {
-    display: block;
-}
-
-#bookfair {
-    margin-top: 40px;
-}
-
-#bookfair2 , #bookfair {
-    width: 80%;
-    height: 400px;
-    display: block;
-    margin-left: 20px;
-}
-
-#right_side {
-    border-style: solid;
-    border-color: black;
-    border-radius: 20px;
-    background-color: white;
-    margin-top:10px;
-    padding-left: 50px;
-    width: 40%;
-    display: block;
-    height: 800px;
 }
 
 #left_side {
-    width: 50%;
-    display: block;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(40, 37, 37);
+    color: aliceblue;
+    width: 40%;
+    font-family: Mali;
+    font-size: 200%;
+    margin: -10px;
+} 
+
+#topic {
+    font-size: 300%;
+}
+
+#date {
+    background-color: orange;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#Signup {
+    background-color: rgb(85, 85, 206);
+    padding-top: 20px;
+}
+
+a:hover {
+    color: aliceblue;
 }
