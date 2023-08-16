@@ -13,7 +13,7 @@ function check() {
         alert("ต้องการชื่อบริษัท");
         company.classList.add("required");
         c = false;
-    } if (chair.value < 1 || chair.value > 10){
+    } if (chair.value < 1 || chair.value > 10 || chair.value%1!=0){
         alert("จำนวนของเก้าอี้สั่งได้แค่ 1-10 ตัวเท่านั้น");
         chair.classList.add("required");
         c = false;
