@@ -2,7 +2,7 @@
 
 body {
     font-family: Mali;
-    background: url(picture/background2.jpg) no-repeat;
+    background: url("picture/background2.jpg") no-repeat;
     display: flex;
     background-size: cover;
     justify-content: center;
