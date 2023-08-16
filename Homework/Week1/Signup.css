@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+body {
+    font-family: Mali;
+    background: url("picture/background2.jpg") no-repeat;
+    display: flex;
+    background-size: cover;
+    justify-content: center;
+}
+
+#form {
+    background-color: aliceblue;
+    align-items: center;
+    margin-top: 150px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    width: 500px;
+    height: 550px;
+}
+
+#topic {
+    padding-left: 22%;
+    padding-top: 12px;
+    font-size: 50px;
+}
+
+form {
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+hr {
+    border-width: 2px;
+    border-color: black;
+    background-color: black;
+}
+
+div label {
+    font-size: 20px;
+}
+
+#size , #table , #chair , #name2 , #number {
+    padding-top: 20px;
+}
+
+#button {
+    padding-top:20px;
+}
+
+#button input{
+    margin-left: 30px;
+}
+
+#button a:hover{
+    color: black;
+}
+
+#botton a {
+    font-size: 30px;
+}
+
+#company_name , #number_of_chair , #person_name , #person_number {
+    border-radius: 20px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#number_of_chair {
+    margin-top: 10px;
+}
+
+#button {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+#submit {
+    font-size: 25px;
+    border-radius: 20px;
+}
+
+#submit:hover {
+    background-color: white;
+}

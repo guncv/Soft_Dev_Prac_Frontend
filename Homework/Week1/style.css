@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+body {
+    background: url("picture/bookfair.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+#left_side {
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(40, 37, 37);
+    color: aliceblue;
+    width: 40%;
+    font-family: Mali;
+    font-size: 200%;
+    margin: -10px;
+} 
+
+#topic {
+    font-size: 300%;
+}
+
+#date {
+    background-color: orange;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#Signup {
+    background-color: rgb(85, 85, 206);
+    padding-top: 20px;
+}
+
+a:hover {
+    color: aliceblue;
+}
