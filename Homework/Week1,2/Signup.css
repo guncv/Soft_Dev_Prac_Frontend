@@ -83,3 +83,8 @@ div label {
 #submit:hover {
     background-color: white;
 }
+
+.required {
+    background-color: rgb(235, 186, 186);
+    border-color: red;
+}

@@ -31,7 +31,7 @@
     
                 <div id="chair">
                     <label for="number_of_chair">จำนวนเก้าอี้ที่ต้องการ</label>
-                    <input type="text" id="number_of_chair" name="number_of_chair">
+                    <input type="number" id="number_of_chair" name="number_of_chair">
                 </div>
     
                 <div id="name2">
@@ -44,9 +44,9 @@
                     <input type="text" id="person_number" name="person_number">
                 </div>
 
-                <div id="button" onclick="check()">
+                <div id="button">
                     <a href="Event.html">Back</a>
-                    <input id="submit" type="submit" value="Submit">
+                    <input onclick="return check()" id="submit" type="submit" value="Submit">
                 </div>
             </form>
         </div>
