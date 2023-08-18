@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+.card {
+    width: 350px;
+    height: 400px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.cardImg {
+    width: 100%;
+    height: 70%;
+    position: relative;
+}
+
+.cardText {
+    height:30%;
+    padding:10px;
+    display: flex;
+    font-size: 70%;
+    font-family: Mali;
+}

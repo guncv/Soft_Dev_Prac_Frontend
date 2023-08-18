@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Mali&display=swap');
+
+.banner {
+    display: block;
+    margin: 0px;
+    width: 100vw;
+    height : 40vw;
+    position: relative;
+}
+
+.bannerText {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    height: 100px;
+    background: url("/img/topic.jpeg") no-repeat;
+    background-size: cover;
+    font-family: Mali;
+}
