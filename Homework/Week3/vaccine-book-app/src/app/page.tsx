@@ -9,7 +9,12 @@ export default function Home() {
       <div>
         <Banner/>
         <div className={styles.eachCard}>
-          <Card/>
+          <Card name="Chulalongkorn Hospital" 
+          picture="/img/chula.jpg"/>
+          <Card name="Rajavithi Hospital"
+          picture="/img/rajavithi.jpg"/>
+          <Card name="Thammasat University Hospital"
+          picture="/img/thammasat.jpg"/>
         </div>
       </div>
     </main>
