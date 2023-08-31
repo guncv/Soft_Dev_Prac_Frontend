@@ -7,8 +7,8 @@ export default function Banner(){
             alt="vaccine banner"
             fill={true}/>
             <div className="text-white block text-6xl relative justify-center items-center text-center">
-                <p className="font-mono">บริการฉีดวัคซีนฟรี</p>
-                <p className="font-mono">ฉีดวัคซีนป้องกันโรคร้ายอย่างดีและทั่วถึว</p>
+                <p>บริการฉีดวัคซีนฟรี</p>
+                <p>ฉีดวัคซีนป้องกันโรคร้ายอย่างดีและทั่วถึง</p>
             </div>
         </div>
     );

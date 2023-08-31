@@ -15,9 +15,9 @@ export default function Card({picture,name,information}:Props){
                 fill={true}
                 className="rounded-2xl"/>
             </div>
-            <div className="my-3.5 font-mono text-center">
-                <p className="text-2xl">{name}</p>
-                <p className="text-lg">{information}</p>
+            <div className="my-3.5 text-center">
+                <h1 className="text-2xl font-mono">{name}</h1>
+                <h2 className="text-lg ">{information}</h2>
             </div>
         </div>
     );

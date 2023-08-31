@@ -1,5 +1,5 @@
-import styles from "./productcard.module.css"
 import Image from "next/image"
+import InteractiveCard from "./InteractiveCard";
 
 interface Props {
     carName:string;
@@ -8,7 +8,7 @@ interface Props {
 
 export default function ProductCard( {carName,imgSrc}:Props) {
     return (
-        <div className="w-1/5 h-[300px] rounded-lg shadow-lg">
+        <InteractiveCard contentName={carName}>
             <div className="w-full h-[70%] relative rounded-t-lg">
                 <Image src={imgSrc}
                 alt="Kafka"
@@ -17,6 +17,6 @@ export default function ProductCard( {carName,imgSrc}:Props) {
                 />
             </div>
             <div className="w-full h-[30%] p-[10px]">{carName}</div>
-        </div>
+        </InteractiveCard>
     )
 }
