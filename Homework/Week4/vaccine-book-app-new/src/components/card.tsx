@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CardAction from "./cardAction";
 
 interface Props {
     picture:string;
@@ -8,7 +9,7 @@ interface Props {
 
 export default function Card({picture,name,information}:Props){
     return (
-        <div className="w-72 h-96 relative shadow-2xl rounded-2xl">
+        <CardAction>
             <div className="h-2/4 py-2.5 relative">
                 <Image src={picture}
                 alt={name}
@@ -17,8 +18,8 @@ export default function Card({picture,name,information}:Props){
             </div>
             <div className="my-3.5 text-center">
                 <h1 className="text-2xl font-mono">{name}</h1>
-                <h2 className="text-lg ">{information}</h2>
+                <h2 className="text-lg font-mono">{information}</h2>
             </div>
-        </div>
+        </CardAction>
     );
 }
