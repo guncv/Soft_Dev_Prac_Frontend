@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { useState } from 'react';
 
 export default function Banner() {
-    const covers = ['/img/cover.png',"/img/cover2.png","/img/cover3.jpg"]
     const [index , setIndex] = useState(0);
+    const covers = ['/img/cover.png',"/img/cover2.png","/img/cover3.jpg"]
 
     return (
         <div className={styles.banner} onClick={()=>{setIndex(index+1);}}>
