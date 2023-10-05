@@ -17,8 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <TopMenu/>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <TopMenu/>
+        {children}
+        </body>
     </html>
   )
 }

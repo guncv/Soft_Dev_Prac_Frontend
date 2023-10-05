@@ -8,7 +8,6 @@ export default function Home() {
     <main>
       <div>
         <Banner/>
-        <CarPanel/>
       </div>
     </main>
   )

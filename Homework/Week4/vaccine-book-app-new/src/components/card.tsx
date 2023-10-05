@@ -9,10 +9,11 @@ interface Props {
     name:string;
     information:string;
     onCompare:Function;
+    hospitalSrc:string
     ratingList:Map<string,number>;
 }
 
-export default function Card({picture,name,information,onCompare,ratingList}:Props){
+export default function Card({picture,name,information,onCompare,hospitalSrc,ratingList}:Props){
 
     return (
         <CardAction>
