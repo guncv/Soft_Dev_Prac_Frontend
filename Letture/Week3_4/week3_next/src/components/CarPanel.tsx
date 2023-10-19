@@ -27,9 +27,9 @@ export default function CarPanel(){
     ]
 
     return (
-        <div>
+            <div>
             <div style={{margin:"20px" , display:"flex" , flexDirection:"row" ,
-      flexWrap:"wrap" , justifyContent:"space-around" , alignContent:"space-around"}}>
+            flexWrap:"wrap" , justifyContent:"space-around" , alignContent:"space-around"}}>
             {
                 mockCarRepo.map((carItem)=>(
                     <Link href={`/car/${carItem.cid}`} className="w-1/5">
