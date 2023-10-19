@@ -29,6 +29,8 @@ export default function Card({picture,name,information,onCompare,hospitalSrc,rat
                     <h2 className="font-mono ">{information}</h2>
                 </div>
                 <div className="ml-[20px]">
+                    {
+                    onCompare && ratingList ?
                     <Rating
                     name="simple-controlled"
                     value={ratingList.get(name) || 0}
@@ -37,7 +39,8 @@ export default function Card({picture,name,information,onCompare,hospitalSrc,rat
                         console.log(ratingList.get(name));
                         onCompare(newValue);
                     }}
-                    />
+                    /> : ""
+                    }
                 </div>
             </div>
         </CardAction>
