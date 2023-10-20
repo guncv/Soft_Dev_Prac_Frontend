@@ -13,9 +13,7 @@ export default function PromoteCard() {
 
     return (
         <div className="w-[80%] shadow-lg mx-[10%] my-10 p-2 rounded-lg bg-yellow-200 flex">
-            <div className="">
-                <VideoPlayer videoPath="/video/getvaccine.mp4" isPlaying={playing} />
-            </div>
+            <VideoPlayer videoPath="/video/getvaccine.mp4" isPlaying={playing} />
             <div className="flex flex-col items-center justify-center ml-[60px]">
                 <span className="text-[30px] font-bold pb-2">Welcome to my Vaccine</span>
                 <button

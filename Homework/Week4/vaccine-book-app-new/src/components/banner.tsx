@@ -2,12 +2,20 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react"
+import { useSession } from "next-auth/react";
 
 export default function Banner(){
+    const covers = [
+        "/img/vaccine.webp",
+        "/img/background2.jpg",
+        "/img/background3.jpg",
+        "/img/background4.jpg",
+    ];
     const [index,setIndex] = useState(0);
     const router = useRouter();
-    const img = ["/img/vaccine.webp","/img/vaccine2.jpg","/img/vaccine3.webp","/img/vaccine4.webp"]
-    
+    const img = ["/img/vaccine.webp","/img/vaccine2.jpg","/img/vaccine3.webp","/img/vaccine4.webp"];
+    const {data: session} = useSession();
+
     return (
         <div className="flex justify-center items-center relative w-screen h-screen"
         onClick={()=>{setIndex(index+1);}}>
@@ -30,6 +38,11 @@ export default function Banner(){
                 >
                 Search more information for hospital
                 </button>
+                <div className="absolute mt-[30px] pt-[50px] right-0 pr-[25px] text-[20px]">
+                {
+                session ? <span className="text-white font-bold">Welcome {session.user?.name} !</span> : ''
+                }
+                </div>
             </div>
         </div>
     );
