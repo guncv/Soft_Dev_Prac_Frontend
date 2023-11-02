@@ -7,16 +7,17 @@ export default async function hospitalCatalog({ hospitalJson }: { hospitalJson: 
 
     return (
         <div className="block">
-            <div className="flex flex-row space-x-[50px] mt-[30px]">
-                {
-                    hospitalJsonReady.data.map((hospitalItem: Object) => (
-                        <Link href={`/hospital/${hospitalItem.id}`} key={hospitalItem.id}>
+            <div className="flex flex-wrap -mx-2 mt-3">
+                {hospitalJsonReady.data.map((hospitalItem: Object) => (
+                    <div key={hospitalItem.id} className="w-1/3 px-2 my-7">
+                        <Link href={`/hospital/${hospitalItem.id}`}>
                             <Card
                                 name={hospitalItem.name}
                                 picture={hospitalItem.picture}
                                 hospitalSrc={hospitalItem.tel}
                             />
                         </Link>
+                     </div>
                     ))
                 }
             </div>

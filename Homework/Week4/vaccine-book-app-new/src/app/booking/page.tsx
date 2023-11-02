@@ -5,9 +5,9 @@ import { authOptions } from "../api/auth/[...nextauth]/route"
 
 export default async function BookingPage(){
     const session = await getServerSession(authOptions);
-    if (!session || !session.user.token) return null
-    const profile = await getUserProfile(session.user.token)
-    var createdAt = new Date(profile.data.createdAt)
+    if (!session || !session.user.token) return null;
+    const profile = await getUserProfile(session.user.token);
+    var createdAt = new Date(profile.data.createdAt);
 
     return (
         <main>
