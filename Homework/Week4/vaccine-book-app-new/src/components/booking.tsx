@@ -10,6 +10,24 @@ export default async function Booking(){
     return(
             <div className="flex justify-end fixed flex-row h-20 
             bg-amber-300 top-0 right-0 left-0 z-30">
+                    <div className='flex w-full h-full items-center top-0 z-[12] pt-5 w-full font-bold pl-5'>
+                    {
+                        session ? <Link href="/api/auth/signout">
+                        <div className='flex items-center font-bold align-middle pr-2 
+        text-md transition-transform transform hover:scale-[1.155] 
+        duration-300 text-cyan-500 '>
+                            Sign-Out of {session.user?.name}
+                        </div>
+                        </Link>
+                            : <Link href="/api/auth/signin" >
+                                <div className='flex items-center font-bold align-middle pr-2 
+        text-md transition-transform transform hover:scale-[1.155] 
+        duration-300 text-cyan-500 text-[40px] mb-[20px]'>
+                                    Sign-In
+                                </div>
+                        </Link>
+                    }
+                </div>  
                 <Link href="/booking">
                     <Image src="/img/book.png"
                         alt="Booking"
@@ -21,21 +39,7 @@ export default async function Booking(){
                     alt="Logo"
                     width={100}
                     height={10}
-                    className="relative my-auto"/> 
-                <div className='fixed top-0 z-[12] pt-5 w-full font-bold pl-2'>
-                    {
-                        session ? <Link href="/api/auth/signout">
-                            <div className="flex items-center absolute h-full  text-[40px] rounded-md text-cyan-500 hover:text-cyan-700">
-                                Sign-Out of {session.user?.name}
-                            </div>
-                            </Link>
-                            : <Link href="/api/auth/signin" >
-                                <div className="flex items-center mt-[10px] absolute h-full  text-[40px] rounded-md text-cyan-500 hover:text-cyan-800">
-                                    Sign in
-                                </div>
-                            </Link>
-                    }
-                </div>    
+                    className="relative my-auto"/>   
             </div>
     );
 }

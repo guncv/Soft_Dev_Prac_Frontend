@@ -16,9 +16,8 @@ export default async function BookingPage(){
                 <div className="my-11 w-screen h-screen items-center flex justify-center">
                 <FormBooking/>
                 </div>
-                : <FormBooking/>
+                : null
             }
-            
         </main>
     )
 }

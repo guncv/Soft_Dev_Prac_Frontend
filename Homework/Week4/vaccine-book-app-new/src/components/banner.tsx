@@ -29,8 +29,9 @@ export default function Banner(){
             <div>
                 <button
                 className="bg-cyan-600 text-white border-2 border-cyan-600 border-opacity-100
+                hover:bg-white hover:text-cyan-600 hover:border-transparent
                 font-semibold py-2 px-2 rounded-lg z-3 absolute bottom-2 right-2 mr-[10px] mb-[10px]
-                transform transition-colors duration-300 hover:bg-white hover:text-cyan-600 hover:border-transparent"
+                transform transition-colors duration-300"
                 onClick={(e) => {
                     e.stopPropagation();
                     router.push("/hospital");
