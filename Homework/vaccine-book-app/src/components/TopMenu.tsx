@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function TopMenu(){
     return (
-        <div className="flex justify-end fixed flex-row h-20 bg-black 
+        <div className="flex justify-end fixed flex-row h-[100px] bg-black 
         top-0 right-0 left-0 z-30 opacity-80 items-center">
             <div className="mr-[40px] flex ">
                 <TopMenuItem name="Home" refer="/"/>

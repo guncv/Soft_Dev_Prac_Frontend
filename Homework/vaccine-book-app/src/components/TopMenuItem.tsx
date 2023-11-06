@@ -1,5 +1,5 @@
 import Link from "next/link"
-import styles from "./TopMenuItem.module.css"
+import styles from "@/styles/FontPage.module.css"
 
 interface Props {
     name:string

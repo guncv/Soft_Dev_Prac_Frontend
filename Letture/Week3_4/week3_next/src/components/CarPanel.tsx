@@ -27,7 +27,7 @@ export default function CarPanel(){
     ]
 
     return (
-            <div>
+        <div>
             <div style={{margin:"20px" , display:"flex" , flexDirection:"row" ,
             flexWrap:"wrap" , justifyContent:"space-around" , alignContent:"space-around"}}>
             {
@@ -37,7 +37,7 @@ export default function CarPanel(){
                     onCompare={(car:string)=>dispatchCompare({type:'add',carName:car})}/>
                     </Link>
                 ))
-            }
+            } 
             </div>
             <div className="w-full text-xl font-medium">Compare List : {compareList.size}</div>
             {Array.from(compareList).map((car)=><div key={car} onClick={()=>dispatchCompare({type:"remove",carName:car})}>{car}</div>)}

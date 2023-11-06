@@ -1,6 +1,6 @@
 'use client'
 import { MenuItem, Select } from "@mui/material"
-import styles from "./BookingForm.module.css"
+import styles from "@/styles/FontPage.module.css"
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers"
 import { AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs"
 import Image from "next/image"
@@ -8,15 +8,15 @@ import Image from "next/image"
 export default function BookingForm(){
     function onFormAction(event:React.SyntheticEvent){
         if (event.type=="mouseover"){
-            event.currentTarget.classList.add("shadow-blue-200");
+            event.currentTarget.classList.add("shadow-slate-200");
         } else {
-            event.currentTarget.classList.remove("shadow-blue-200");
+            event.currentTarget.classList.remove("shadow-slate-200");
         }
     }
 
     return (
-        <div className={`${styles.font} w-[900px] h-[550px] bg-blue-100 rounded-2xl 
-        shadow-xl border-blue-300 border-[10px]`}
+        <div className={`${styles.font} w-[900px] h-[550px] bg-slate-200 rounded-2xl 
+        shadow-xl border-slate-400 border-[10px]`}
         onMouseOver={(e)=>onFormAction(e)}
         onMouseOut={(e)=>onFormAction(e)}>
             <div className="mt-[20px] text-[40px] text-center font-bold flex justify-center">
@@ -76,8 +76,8 @@ export default function BookingForm(){
 
                 <div className="pt-[40px] space-x-[20px]">
                     {/* Submit Button */}
-                    <button type="submit" className={`${styles.font} rounded-xl bg-blue-100 text-[20px] ring-2
-                    ring-blue-600 hover:bg-white p-[5px] hover:scale-[1.15] duration-300`}>
+                    <button type="submit" className={`${styles.font} rounded-xl bg-slate-100 text-[20px] ring-2
+                    ring-slate-600 hover:bg-white p-[5px] hover:scale-[1.15] duration-300`}>
                         Submit
                     </button>
                 </div>

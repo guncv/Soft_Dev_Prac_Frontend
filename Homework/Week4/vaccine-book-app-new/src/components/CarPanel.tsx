@@ -60,7 +60,7 @@ export default function CarPanel(){
             <div className="text-[50px]">
                 <div className="w-full text-[70px] font-bold">Hospital Rating :</div>
                 {Array.from(ratingList.entries()).map(([key,value])=>
-                <div key={key} onClick={()=>dispatchCompare({type:"remove", hospitalName:key , rating:0})}>{key}: {value}</div>)}
+                <div key={key} onClick={()=>dispatchCompare({type:"remove",hospitalName:key,rating:value})}>{key}: {value}</div>)}
             </div>
         </div>
     )
