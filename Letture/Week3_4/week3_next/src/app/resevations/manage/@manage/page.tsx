@@ -1,7 +1,7 @@
 export default function ManagePage(){
     return (
-        <main className="bg-slate-100">
-            <div>Your Manage</div>
+        <main>
+            <div>Your Reservation</div>
         </main>
     )
 }

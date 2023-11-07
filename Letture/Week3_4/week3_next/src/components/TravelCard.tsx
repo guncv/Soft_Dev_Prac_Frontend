@@ -2,16 +2,13 @@
 import {VlogPlayer} from "./VlogPlayer"
 import {useState} from "react"
 import {Rating} from "@mui/material"
-import {useWindowListener} from "@/app/hooks/useWindowListener"
+
  
 export function TravelCard(){
     const [playing,setPlaying] = useState(true);
     const [rating,setRating] = useState(0);
     const [pointerPosition,setPointerPosition] = useState({x:0,y:0})
 
-    useWindowListener("pointermove",(e)=>{
-        setPointerPosition({x:(e as PointerEvent).clientX,y:(e as PointerEvent).clientY})
-    })
 
     return (
         <div className="w-[80%] shadow-lg mx-[10%] my-10 p-2 rounded-lg 
