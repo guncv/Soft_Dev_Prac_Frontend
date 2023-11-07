@@ -44,7 +44,7 @@ export default function Banner(){
             <div className="bottom-0 right-0">
                 <button className={`${styles.font} text-white bg-cyan-600 border border-white
                 font-semibold py-2 px-2 m-2 rounded z-30 absolute bottom-0 right-0
-                opacity-60 hover:opacity-100 text-[30px]`}
+                opacity-60 hover:opacity-100 text-[2vw]`}
                 onClick={(e) => {e.stopPropagation(); router.push("/hospital")}}>
                 Booking Your Vaccine Now
                 </button>

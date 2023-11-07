@@ -53,9 +53,8 @@ export default function CardItem({picture,name,onRating,ratingList}:Props){
                     <Rating name="half-rating" 
                     value={ratingList.get(name) || 0}
                     defaultValue={0} precision={1} size="large"
-                    onChange={(e,newRating) => {e.stopPropagation();
-                    e.preventDefault(); 
-                    onRating(newRating,name); setRating(newRating);}}/>
+                    onChange={(e,newRating) => {e.stopPropagation(); 
+                    onRating(newRating,name); if(newRating!= null) setRating(newRating);}}/>
                 </div>
             </div>    
         </div>
