@@ -1,23 +1,24 @@
 'use client'
-import { useRef,useEffect, useState } from "react"
-interface Props {
+import { useRef,useEffect,} from "react"
+import { useWindowListener } from "@/hooks/useWindowListener"
+
+interface Props{
     vdoSrc:string
     isPlaying:boolean
 }
 
-export function VlogPlayer({vdoSrc,isPlaying}:Props){
-
+export default function VlogPlayer({vdoSrc,isPlaying}:Props){
     const vdoRef = useRef<HTMLVideoElement>(null);
 
-    useEffect(() => {
+    useEffect(()=> {
         if (isPlaying){
-            //alert("Play VDO");
             vdoRef.current?.play();
-        }else{
-            //alert("Pause Vdo")
+        } else {
             vdoRef.current?.pause();
         }
-    } , [isPlaying])
+    },[isPlaying])
+
+    useWindowListener("resize",(e)=>{alert("Window Width is" + (e.target as Window).innerWidth)});
 
     return (
         <video className="w-[40%]" src={vdoSrc} ref={vdoRef} controls loop muted/>
