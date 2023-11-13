@@ -4,8 +4,18 @@ import styles from "@/styles/FontPage.module.css"
 import { DatePicker, LocalizationProvider } from "@mui/x-date-pickers"
 import { AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs"
 import Image from "next/image"
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+import getUserProfile from "@/libs/getUserProfile"
 
-export default function BookingForm(){
+export default async function BookingForm(){
+
+    const session = await getServerSession(authOptions);
+    if (!session || !session.user.token) return null;
+
+    const profile = await getUserProfile(session.user.token);
+    var createdAt = new Date(profile.data.createdAt);
+
     function onFormAction(event:React.SyntheticEvent){
         if (event.type=="mouseover"){
             event.currentTarget.classList.add("shadow-slate-200");
@@ -15,8 +25,28 @@ export default function BookingForm(){
     }
 
     return (
-        <div className={`${styles.font} w-[900px] h-[550px] bg-slate-200 rounded-2xl 
-        shadow-xl border-slate-400 border-[10px]`}
+        <div>
+            <div className={`${styles.font} text-white mt-[60px] bg-slate-600 rounded-lg p-[10px]`}>
+                <div className="font-bold text-[20px]">{profile.data.name}</div>
+                <table className="table-auto border-seperate border-spacing-2">
+                    <tbody>
+                        <tr>
+                            <td>Email</td>
+                            <td>   : {profile.data.email}</td>
+                        </tr>
+                        <tr>
+                            <td>Tel</td>
+                            <td>   : {profile.data.tel}</td>
+                        </tr>
+                        <tr>
+                            <td>Member Since</td>
+                            <td>   : {createdAt.toString()}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        <div className={`${styles.font} w-[850px] h-[550px] bg-slate-200 rounded-2xl 
+        shadow-xl border-slate-400 border-[10px] mt-[20px]`}
         onMouseOver={(e)=>onFormAction(e)}
         onMouseOut={(e)=>onFormAction(e)}>
             <div className="mt-[20px] text-[40px] text-center font-bold flex justify-center">
@@ -82,6 +112,7 @@ export default function BookingForm(){
                     </button>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

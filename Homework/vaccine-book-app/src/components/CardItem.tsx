@@ -7,8 +7,8 @@ import { useState } from "react"
 interface Props{
     picture:string
     name:string
-    onRating:Function
-    ratingList:Map<string,number>
+    onRating?:Function
+    ratingList?:Map<string,number>
 }
 
 export default function CardItem({picture,name,onRating,ratingList}:Props){
@@ -47,14 +47,17 @@ export default function CardItem({picture,name,onRating,ratingList}:Props){
                 {name}
             </div>
             <div className="flex justify-end mr-[20px] mt-[20px]">
-                <div className="flex space-x-[10px] bg-slate-300 py-[5px] px-[10px] rounded-xl 
-                hover:scale-[1.1] duration-300 items-center">
-                    <h1 className={`${styles.font} text-[25px] font-bold`}>Rating</h1>
-                    <Rating name="half-rating" 
-                    value={ratingList.get(name) || 0}
-                    defaultValue={0} precision={1} size="large"
-                    onChange={(e,newRating) => {e.stopPropagation(); 
-                    onRating(newRating,name); if(newRating!= null) setRating(newRating);}}/>
+                    <div className="flex space-x-[10px] bg-slate-300 py-[5px] px-[10px] rounded-xl 
+                    hover:scale-[1.1] duration-300 items-center">
+                        <h1 className={`${styles.font} text-[25px] font-bold`}>Rating</h1>
+                    {
+                        onRating? <Rating name="half-rating" 
+                        value={ratingList.get(name) || 0}
+                        defaultValue={0} precision={1} size="large"
+                        onChange={(e,newRating) => {e.stopPropagation(); 
+                        onRating(newRating,name); if(newRating!= null) setRating(newRating);}}/> : " "
+                    }
+                    
                 </div>
             </div>    
         </div>
