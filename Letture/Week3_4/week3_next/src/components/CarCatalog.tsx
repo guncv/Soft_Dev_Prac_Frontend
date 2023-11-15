@@ -15,7 +15,8 @@ export default async function CarCatalog({carJson} : Props){
             flexWrap:"wrap" , justifyContent:"space-around" , alignContent:"space-around"}}>
             {
                 carJsonReady.data.map((carItem:Object)=>(
-                    <Link href={`/car/${carItem.id}`} className="w-1/5">
+                    <Link href={`/car/${carItem.id}`} className="w-[100%] sm:w-[50%] md:w-[30%] lg:w-[25%]
+                    p-2 sm:p-4 md:p-4 lg:p-8">
                     <ProductCard carName={carItem.model} imgSrc={carItem.picture}/>
                     </Link>
                 ))

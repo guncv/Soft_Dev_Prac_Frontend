@@ -1,5 +1,6 @@
-import getCar from "@/libs/getCar";
+import getCar from "@/libs/getCar"
 import Image from "next/image"
+import Link from "next/link"
 
 interface Props {
     params:{cid:string}
@@ -25,7 +26,7 @@ export default async function CarDetailPage({params} : Props){
                 src={carDetail.data.picture}
                 alt="Car Image"
                 width={0} height={0} sizes="100vw"/>
-                <div className="text-center">
+                <div>
                     <div className="text-md mx-5 text-[20px]">
                         {carDetail.data.model}
                     </div>
@@ -36,10 +37,24 @@ export default async function CarDetailPage({params} : Props){
                         Doors : {carDetail.data.doors}
                     </div>
                     <div className="text-md mx-5 text-[20px]">
-                        Seats: {carDetail.data.seats}
+                        Large Bags : {carDetail.data.largebags}
                     </div>
+                    <div className="text-md mx-5 text-[20px]">
+                        Small Bags: {carDetail.data.smallbags}
+                    </div>
+                    <div className="text-md mx-5 text-[20px]">
+                        Daily Rental Rate: {carDetail.data.dayRate}
+                    </div>
+
+                    <Link href={`/reservation?id=${params.cid}&model=${carDetail.data.model}`}>
+                    <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2 text-lg 
+                    text-white shadow-small mx-5">
+                        Make Reservation
+                    </button>
+                    </Link>
                 </div>
             </div>
+            
         </main>
     )
 }
