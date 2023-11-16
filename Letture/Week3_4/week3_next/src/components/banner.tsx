@@ -15,7 +15,8 @@ export default function Banner() {
 
     return (
         <div className={styles.banner} onClick={()=>{setIndex(index+1);}}>
-            <Image src={covers[index%3]}
+            <Image className="object-cover"
+            src={covers[index%3]}
             alt="cover"
             fill={true}
             priority
