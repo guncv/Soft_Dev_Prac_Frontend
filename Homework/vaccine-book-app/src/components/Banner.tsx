@@ -45,7 +45,7 @@ export default function Banner(){
             {
                 session? 
                 <div className={`${styles.font} z-30 absolute top-5 right-5 text-white 
-                text-[2vw] mt-[85px] opacity-80`}>
+                text-[2vw] opacity-80 mt-[77px]`}>
                     Welcome {session.user?.name} 
                 </div>
                 : null

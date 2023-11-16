@@ -47,3 +47,6 @@ const CarSchema = new mongoose.Schema(
       toObject: { virtuals: true },
     }
   );
+
+const Car = mongoose.models.Car || mongoose.model("Car, Schema")
+export default Car

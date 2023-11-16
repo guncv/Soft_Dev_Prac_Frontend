@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "@/styles/FontPage.module.css"
 import getHospital from "@/libs/getHospital";
+import Link from "next/link";
 
 interface Props {
     params:{hid:string}
@@ -8,10 +9,6 @@ interface Props {
 
 export default async function HospitalInformation({params}:Props){
     const hospitalInfo = await getHospital(params.hid);
-    // const hospitalInfo = new Map()
-    // hospitalInfo.set("001",{picture:"/img/chula.jpg",name:"Chulalongkorn Hospital"});
-    // hospitalInfo.set("002",{picture:"/img/rajavithi.jpg",name:"Rajavithi Hospital"});
-    // hospitalInfo.set("003",{picture:"/img/thammasat.jpg",name:"Thammasat University Hospital"});
 
     return (
         <div className="flex flex-row ml-[5%] mt-[100px] rounded-xl">
@@ -45,6 +42,13 @@ export default async function HospitalInformation({params}:Props){
                         Postal code : {hospitalInfo.data.postalcode}
                     </div>
                 </div>
+                <Link href={`/booking?id=${params.hid}&name=${hospitalInfo.data.name}`}>
+                    <button className="bg-white text-cyan-600 border-2 border-cyan-600 border-opacity-100
+                    font-semibold py-2 px-10 rounded-lg z-3 mt-[15px] mb-[10px] transform transition-colors duration-300 
+                    hover:bg-cyan-600 hover:text-white hover:border-transparent">
+                        Booking
+                    </button>
+                </Link>
             </div>
         </div>
     )

@@ -9,6 +9,7 @@ export default function PromoteCard(){
 
     useWindowListener("contextmenu",(e)=>{
         e.preventDefault();
+        e.stopPropagation();
     });
 
     return (
